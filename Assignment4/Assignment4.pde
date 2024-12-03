@@ -2,16 +2,34 @@
 //must go from Earth(bottom of screen) to Mars(top of screen) without getting hit. 
 //If they get hit, they must retry until they reach Mars. If they reach Mars, they win.
 
+//Use arrays to create a set of stars
+//Stars stars;
+Stars[] stars = new Stars[60];
+
 void setup() {
   
+  //set the size of the canvas
   size(400, 400);
+  
+  //remove strokes for all drawings
+  noStroke();
+  
+  //set up the stars
+  for (int i = 0; i < stars.length; i++) {
+    stars[i] = new Stars();
+  }
+  
 }
 
 void draw() {
   //draw outer space
   background(60, 45, 75);
-  //remove strokes for all drawings
-  noStroke();
+  
+  //display the stars
+  for (int i = 0; i < stars.length; i++) {
+    stars[i].display();
+  }
+ 
   
   //Draw the moon by drawing an ellipse and colouring it grey
   fill(150);
