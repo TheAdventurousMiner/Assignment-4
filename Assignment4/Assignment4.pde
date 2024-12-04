@@ -3,8 +3,8 @@
 //If they get hit, they must retry until they reach Mars. If they reach Mars, they win.
 
 //Use arrays to create a set of stars
-//Stars stars;
 Stars[] stars = new Stars[60];
+Asteroids[] asteroids = new Asteroids[10];
 
 void setup() {
   
@@ -19,6 +19,10 @@ void setup() {
     stars[i] = new Stars();
   }
   
+  for (int i = 0; i < asteroids.length; i++) {
+    asteroids[i] = new Asteroids();
+  }
+  
 }
 
 void draw() {
@@ -28,6 +32,12 @@ void draw() {
   //display the stars
   for (int i = 0; i < stars.length; i++) {
     stars[i].display();
+  }
+  
+  for (int i = 0; i < asteroids.length; i++) {
+    asteroids[i].passby();
+    asteroids[i].display();
+    asteroids[i].reset();
   }
  
   
