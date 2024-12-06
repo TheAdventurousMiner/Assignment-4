@@ -22,6 +22,8 @@ class Spaceship {
        shipY=shipY+5;
      }
     }
+    shipX = constrain(shipX, 5, 380);
+    shipY = constrain(shipY, -20, 380);
    }
    
    void display() {

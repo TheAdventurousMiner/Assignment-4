@@ -72,7 +72,7 @@ void draw() {
   }
   
   //Draw the moon by drawing an ellipse and colouring it grey
-  fill(150);
+  fill(200);
   ellipse(50, 370, 75, 75);
   
   //Draw planet Earth at the bottom of the screen by drawing an ellipse and colouring it blue.
