@@ -12,7 +12,7 @@ class AsteroidsTwo {
   AsteroidsTwo() {
     asteroidTwoX = random(0, width);
     asteroidTwoY = random(160, 200);
-    asteroidTwoSpeed = -8;
+    asteroidTwoSpeed = -7;
   }
   //set the speed of the asteroid
   void passby() {

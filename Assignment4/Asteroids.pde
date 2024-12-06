@@ -18,6 +18,7 @@ class Asteroids {
   void passby() {
     asteroidX = asteroidX + asteroidSpeed;
   }
+
   //set the look of the asteroid
   void display() {
     fill(190);

@@ -4,9 +4,10 @@
 
 //Use arrays to create a set of stars
 Stars[] stars = new Stars[60];
-Asteroids[] asteroids = new Asteroids[10];
+Asteroids[] asteroid = new Asteroids[10];
 AsteroidsTwo[] asteroidsTwo = new AsteroidsTwo[10];
 AsteroidsThree[] asteroidsThree = new AsteroidsThree[10];
+Spaceship ship;
 
 void setup() {
   
@@ -21,8 +22,8 @@ void setup() {
     stars[i] = new Stars();
   }
   
-  for (int i = 0; i < asteroids.length; i++) {
-    asteroids[i] = new Asteroids();
+  for (int i = 0; i < asteroid.length; i++) {
+    asteroid[i] = new Asteroids();
   }
   
   for (int i = 0; i < asteroidsTwo.length; i++) {
@@ -32,6 +33,8 @@ void setup() {
   for (int i = 0; i < asteroidsThree.length; i++) {
     asteroidsThree[i] = new AsteroidsThree();
   }
+  
+  ship = new Spaceship();
   
 }
 
@@ -44,10 +47,10 @@ void draw() {
     stars[i].display();
   }
   
-  for (int i = 0; i < asteroids.length; i++) {
-    asteroids[i].passby();
-    asteroids[i].display();
-    asteroids[i].reset();
+  for (int i = 0; i < asteroid.length; i++) {
+    asteroid[i].passby();
+    asteroid[i].display();
+    asteroid[i].reset();
   }
  
   for (int i = 0; i < asteroidsTwo.length; i++) {
@@ -84,4 +87,8 @@ void draw() {
   fill(130, 40, 65);
   ellipse(160, 0, 100, 20);
   ellipse(230, 25, 60, 15);
+  
+  ship.control();
+  ship.display();
+  
 }
