@@ -3,13 +3,25 @@ class Spaceship {
    float shipY;
    
    Spaceship() {
-     shipX = width/2;
-     shipY = height/2;
+     shipX = 190;
+     shipY = 370;
    }
    
    void control() {
-     shipX = mouseX;
-     shipY = mouseY;
+    if(keyPressed==true) {
+     if(key== 'a') {
+       shipX=shipX-5;
+     }
+     if(key== 'd') {
+       shipX=shipX+5;
+     }
+     if(key== 'w') {
+       shipY=shipY-5;
+     }
+     if(key== 's') {
+       shipY=shipY+5;
+     }
+    }
    }
    
    void display() {

@@ -11,8 +11,8 @@ class AsteroidsThree {
   //set the asteroids in specific locations
   AsteroidsThree() {
     asteroidThreeX = random(0, width);
-    asteroidThreeY = random(60, 100);
-    asteroidThreeSpeed = 10;
+    asteroidThreeY = random(40, 70);
+    asteroidThreeSpeed = 9;
   }
   //set the speed of the asteroid
   void passby() {

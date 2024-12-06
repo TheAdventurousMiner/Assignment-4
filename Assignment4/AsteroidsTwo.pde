@@ -11,7 +11,7 @@ class AsteroidsTwo {
   //set the asteroids in specific locations
   AsteroidsTwo() {
     asteroidTwoX = random(0, width);
-    asteroidTwoY = random(160, 200);
+    asteroidTwoY = random(170, 200);
     asteroidTwoSpeed = -7;
   }
   //set the speed of the asteroid

@@ -35,7 +35,6 @@ void setup() {
   }
   
   ship = new Spaceship();
-  
 }
 
 void draw() {
@@ -90,5 +89,4 @@ void draw() {
   
   ship.control();
   ship.display();
-  
 }
