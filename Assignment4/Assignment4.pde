@@ -5,6 +5,8 @@
 //Use arrays to create a set of stars
 Stars[] stars = new Stars[60];
 Asteroids[] asteroids = new Asteroids[10];
+AsteroidsTwo[] asteroidsTwo = new AsteroidsTwo[10];
+AsteroidsThree[] asteroidsThree = new AsteroidsThree[10];
 
 void setup() {
   
@@ -21,6 +23,14 @@ void setup() {
   
   for (int i = 0; i < asteroids.length; i++) {
     asteroids[i] = new Asteroids();
+  }
+  
+  for (int i = 0; i < asteroidsTwo.length; i++) {
+    asteroidsTwo[i] = new AsteroidsTwo();
+  }
+  
+  for (int i = 0; i < asteroidsThree.length; i++) {
+    asteroidsThree[i] = new AsteroidsThree();
   }
   
 }
@@ -40,6 +50,17 @@ void draw() {
     asteroids[i].reset();
   }
  
+  for (int i = 0; i < asteroidsTwo.length; i++) {
+    asteroidsTwo[i].passby();
+    asteroidsTwo[i].display();
+    asteroidsTwo[i].reset();
+  }
+  
+  for (int i = 0; i < asteroidsThree.length; i++) {
+    asteroidsThree[i].passby();
+    asteroidsThree[i].display();
+    asteroidsThree[i].reset();
+  }
   
   //Draw the moon by drawing an ellipse and colouring it grey
   fill(150);

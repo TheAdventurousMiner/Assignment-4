@@ -1,32 +1,32 @@
 //Make a new user-defined class for asteroids
 
-class Asteroids {
+class AsteroidsThree {
   
   //set variables for the location and speed of the asteroids by making user-defined
   //variables for the asteroids x and y locations and the speed
-  float asteroidX;
-  float asteroidY;
-  float asteroidSpeed;
+  float asteroidThreeX;
+  float asteroidThreeY;
+  float asteroidThreeSpeed;
   
   //set the asteroids in specific locations
-  Asteroids() {
-    asteroidX = random(0, width);
-    asteroidY = random(260, 300);
-    asteroidSpeed = 4;
+  AsteroidsThree() {
+    asteroidThreeX = random(0, width);
+    asteroidThreeY = random(60, 100);
+    asteroidThreeSpeed = 12;
   }
   //set the speed of the asteroid
   void passby() {
-    asteroidX = asteroidX + asteroidSpeed;
+    asteroidThreeX = asteroidThreeX + asteroidThreeSpeed;
   }
   //set the look of the asteroid
   void display() {
     fill(190);
-    ellipse(asteroidX, asteroidY, 20, 20);
+    ellipse(asteroidThreeX, asteroidThreeY, 20, 20);
   }
   //reset the asteroids as they go by the screen
   void reset() {
-    if (asteroidX > 450) {
-      asteroidX = -50;
+    if (asteroidThreeX > 450) {
+      asteroidThreeX = -50;
     }
   }
 }
