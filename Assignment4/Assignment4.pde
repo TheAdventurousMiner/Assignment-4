@@ -8,6 +8,7 @@ Asteroids[] asteroid = new Asteroids[10];
 AsteroidsTwo[] asteroidsTwo = new AsteroidsTwo[10];
 AsteroidsThree[] asteroidsThree = new AsteroidsThree[10];
 Spaceship ship;
+shootingStar shooting;
 
 void setup() {
   
@@ -16,6 +17,8 @@ void setup() {
   
   //remove strokes for all drawings
   noStroke();
+  
+  shooting = new shootingStar();
   
   //set up the stars
   for (int i = 0; i < stars.length; i++) {
@@ -40,6 +43,10 @@ void setup() {
 void draw() {
   //draw outer space
   background(60, 45, 75);
+  
+  shooting.update();
+  shooting.edges();
+  shooting.display();
   
   //display the stars
   for (int i = 0; i < stars.length; i++) {
