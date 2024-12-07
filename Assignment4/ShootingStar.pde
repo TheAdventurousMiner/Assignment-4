@@ -1,3 +1,4 @@
+//make user-defined class for shooting star
 class shootingStar {
   
   PVector location;

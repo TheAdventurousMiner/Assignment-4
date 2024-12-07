@@ -7,9 +7,9 @@ Stars[] stars = new Stars[60];
 Asteroids[] asteroid = new Asteroids[10];
 AsteroidsTwo[] asteroidsTwo = new AsteroidsTwo[10];
 AsteroidsThree[] asteroidsThree = new AsteroidsThree[10];
-//Spaceship ship;
-shootingStar shooting;
 
+shootingStar shooting;
+//set variables for ship x and y location
 float shipX = 190;
 float shipY = 370;
 
@@ -23,7 +23,7 @@ void setup() {
   
   shooting = new shootingStar();
   
-  //set up the stars
+  //set up the stars and asteroids
   for (int i = 0; i < stars.length; i++) {
     stars[i] = new Stars();
   }
@@ -51,7 +51,7 @@ void draw() {
   shooting.edges();
   shooting.display();
   
-  //display the stars
+  //display the stars and asteroids location and speed
   for (int i = 0; i < stars.length; i++) {
     stars[i].display();
   }
@@ -99,19 +99,15 @@ void draw() {
   
   
   spaceship(shipX, shipY);
-  //ship.control();
-  //ship.display();
+
   
 }
 
 void spaceship(float x,float y) {
    
-   //Spaceship() {
-     //shipX = 190;
-     //shipY = 370;
-   //}
+
    
-   //void control() {
+
     if(keyPressed==true) {
      if(key== 'a') {
        shipX=shipX-5;
@@ -144,7 +140,7 @@ void spaceship(float x,float y) {
     shipY= 370;
   }
    
-   //void display() {
+
      fill(245);
      rect(shipX, shipY, 20, 20);
      triangle(shipX, shipY, shipX+10, shipY-20, shipX+20, shipY);
@@ -155,5 +151,5 @@ void spaceship(float x,float y) {
      rect(shipX+5, shipY+20, 10, 5);
      fill(0);
      ellipse(shipX+10, shipY, 10, 10);
-   //}
+
 }
