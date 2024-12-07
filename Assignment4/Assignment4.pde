@@ -7,8 +7,11 @@ Stars[] stars = new Stars[60];
 Asteroids[] asteroid = new Asteroids[10];
 AsteroidsTwo[] asteroidsTwo = new AsteroidsTwo[10];
 AsteroidsThree[] asteroidsThree = new AsteroidsThree[10];
-Spaceship ship;
+//Spaceship ship;
 shootingStar shooting;
+
+float shipX = 190;
+float shipY = 370;
 
 void setup() {
   
@@ -37,7 +40,7 @@ void setup() {
     asteroidsThree[i] = new AsteroidsThree();
   }
   
-  ship = new Spaceship();
+  //ship = new Spaceship();
 }
 
 void draw() {
@@ -94,6 +97,63 @@ void draw() {
   ellipse(160, 0, 100, 20);
   ellipse(230, 25, 60, 15);
   
-  ship.control();
-  ship.display();
+  
+  spaceship(shipX, shipY);
+  //ship.control();
+  //ship.display();
+  
+}
+
+void spaceship(float x,float y) {
+   
+   //Spaceship() {
+     //shipX = 190;
+     //shipY = 370;
+   //}
+   
+   //void control() {
+    if(keyPressed==true) {
+     if(key== 'a') {
+       shipX=shipX-5;
+     }
+     if(key== 'd') {
+       shipX=shipX+5;
+     }
+     if(key== 'w') {
+       shipY=shipY-5;
+     }
+     if(key== 's') {
+       shipY=shipY+5;
+     }
+    }
+    shipX = constrain(shipX, 5, 380);
+    shipY = constrain(shipY, -20, 380);
+   //}
+   if (shipY < 0) {
+     fill(255);
+    text("Mission Accomplished! Click Mouse to play again.", 70, 20);
+  }
+  
+  if (shipY > 360) {
+    fill(0);
+    text("Let's go to Mars!", 100, 380);
+  }
+  
+  if (mousePressed == true) {
+    shipX = 190;
+    shipY= 370;
+  }
+   
+   //void display() {
+     fill(245);
+     rect(shipX, shipY, 20, 20);
+     triangle(shipX, shipY, shipX+10, shipY-20, shipX+20, shipY);
+     fill(255, 0, 0);
+     triangle(shipX, shipY+10, shipX, shipY+20, shipX-10, shipY+30);
+     triangle(shipX+20, shipY+10, shipX+20, shipY+20, shipX+30, shipY+30);
+     fill(100);
+     rect(shipX+5, shipY+20, 10, 5);
+     fill(0);
+     ellipse(shipX+10, shipY, 10, 10);
+   //}
 }
